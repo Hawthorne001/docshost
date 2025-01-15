@@ -194,17 +194,61 @@ Create a new deployment for the API using the [`CreateDeployment`](https://docs.
 {{< command >}}
 $ awslocal apigateway create-deployment \
   --rest-api-id <REST_API_ID> \
-  --stage-name test
+  --stage-name dev
 {{< /command >}}
 
 Your API is now ready to be invoked.
-You can use `cURL` or any HTTP REST client to invoke the API endpoint:
+You can use [curl](https://curl.se/) or any HTTP REST client to invoke the API endpoint:
 
 {{< command >}}
-$ curl -X GET http://localhost:4566/restapis/<REST_API_ID>/test/_user_request_/test
+$ curl -X GET http://<REST_API_ID>.execute-api.localhost.localstack.cloud:4566/dev/test
 
 {"message":"Hello World"}
 {{< /command >}}
+
+You can also use our [alternative URL format]({{< ref "#alternative-url-format" >}})  in case of DNS issues:
+{{< command >}}
+$ curl -X GET http://localhost:4566/_aws/execute-api/<REST_API_ID>/dev/test
+
+{"message":"Hello World"}
+{{< /command >}}
+
+## New API Gateway implementation
+
+{{< callout >}}
+The new API Gateway implementation for both v1 (REST API) and v2 (HTTP API), introduced in [LocalStack 3.8.0](https://blog.localstack.cloud/localstack-release-v-3-8-0/#new-api-gateway-provider), is now the default in 4.0.
+If you were using the `PROVIDER_OVERRIDE_APIGATEWAY=next_gen` flag, please remove it as it is no longer required.
+
+The legacy provider (`PROVIDER_OVERRIDE_APIGATEWAY=legacy`) is temporarily available but deprecated and will be removed in the next major release.
+We strongly recommend migrating to the new implementation.
+{{< /callout >}}
+
+We're entirely reworked how REST and HTTP APIs are invoked, to closely match the behavior on AWS.
+This new implementation has improved parity on several key areas:
+
+- for [REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html):
+  - properly applying the [request and response data mappings](https://docs.aws.amazon.com/apigateway/latest/developerguide/request-response-data-mappings.html) for all integrations
+  - better parity for VTL template rendering ([Mapping Templates](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html)) for the integrations supporting it (`AWS`, `HTTP` and `MOCK`)
+  - properly supporting [Mapping Templates overrides](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-override-request-response-parameters.html)
+  - better parity for `AWS_PROXY` integration payloads
+  - out of the box support for most of `AWS` integrations
+  - support for [Gateway Responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-gatewayResponse-definition.html)
+    - we currently only support overriding the Status Code and returning the proper exception, and do not apply mapping template (response body) or parameter mappings (response headers)
+- for [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html):
+  - better validation and parity for most API operations related to HTTP APIs
+  - better parity and properly applying [request and response Parameter Mappings](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for all integrations
+  - we've properly implemented the `AWS_PROXY` [Lambda integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html) and `REQUEST` [Lambda Authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html) payloads to be fully on parity with AWS
+  - better [routing](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html) handling
+  - better [CORS](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html) handling, especially around automatic `OPTIONS` responses
+  - support for [automatic deployments](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-stages.html) of your stages
+- For both REST and HTTP APIs:
+  - support Stage and Deployments, meaning you can now have different stages pointing to different deployments like in AWS
+  - better logging on the different steps in the LocalStack logs
+
+Currently, [WebSockets APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html) are still using the default implementation.
+
+As we're closely following AWS, for REST and HTTP APIs, you now need to create a deployment in order for your API to be reachable.
+Thanks to this improvement, you can now create different stages point to different deployments of your API (for example, `dev` and `production`) with different settings and stage variables, and those will be reflected in LocalStack.
 
 ## LocalStack features
 
@@ -244,7 +288,7 @@ There are two alternative URL formats to access these endpoints.
 The recommended URL format for accessing APIs is to use the following URL syntax with an `execute-api` hostname:
 
 ```shell
-http://<apiId>.execute-api.localhost.localstack.cloud:4566/<stageId>/<path>
+http://<apiId>.execute-api.localhost.localstack.cloud:4566/<stageName>/<path>
 ```
 
 Here's an example of how you would access the HTTP/REST API with an ID of `0v1p6q6`:
@@ -254,7 +298,7 @@ http://0v1p6q6.execute-api.localhost.localstack.cloud:4566/local/my/path2
 ```
 
 Note that the local stage ID is added in this example.
-Adding the stage ID is required for API Gateway V1 APIs, but optional for API Gateway V2 APIs (in case they include the wildcard `$default` stage).
+Adding the stage ID is required for API Gateway V1 APIs, but optional for API Gateway V2 APIs (in case a `$default` stage is created).
 For v2 APIs, the following URL should also work:
 
 ```shell
@@ -263,21 +307,31 @@ http://0v1p6q6.execute-api.localhost.localstack.cloud:4566/my/path1
 
 #### Alternative URL format
 
-The alternative URL format is an endpoint with the predefined path marker `_user_request_`:
+The alternative URL format is an endpoint with the predefined base path `/_aws/execute-api`:
 
 ```shell
-http://localhost:4566/restapis/<apiId>/<stageId>/_user_request_/<path>
+http://localhost:4566/_aws/execute-api/<apiId>/<stageName>/<path>
 ```
 
 For the example above, the URL would be:
 
 ```shell
-http://localhost:4566/restapis/0v1p6q6/local/_user_request_/my/path1
+http://localhost:4566/_aws/execute-api/0v1p6q6/local/my/path1
 ```
 
 This format is sometimes used in case of local DNS issues.
 
-### WebSocket APIs
+{{< callout >}}
+
+If you are using LocalStack 4.0, the following `_user_request_` format is deprecated, and you should use the format above.
+
+```shell
+http://localhost:4566/restapis/<apiId>/<stageName>/_user_request_/<path>
+```
+
+{{< / callout >}}
+
+### WebSocket APIs (Pro)
 
 WebSocket APIs provide real-time communication channels between a client and a server.
 To use WebSockets in LocalStack, you can define a WebSocket route in your Serverless configuration:
@@ -367,14 +421,23 @@ Setting the API Gateway ID via `_custom_id_` works only on the creation of the r
 Ensure that you set the `_custom_id_` tag on creation of the resource.
 {{< /callout >}}
 
-## Custom Domain Names with API Gateway
+## Custom Domain Names with API Gateway (Pro)
 
-You can use custom domain names with API Gateway V1 and V2 APIs.
-To route requests to a custom domain name for an API Gateway V2 API, include the `Host` header with the custom domain name in your request.
-For example, assuming that you have set up a custom domain name `test.example.com` to point to your LocalStack instance, you can send a request like this:
+You can use custom domain names with API Gateway [REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) and [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-custom-domain-names.html).
+
+To use custom domains, you will need to set up an API Gateway Domain Name and create an API Mapping linked to your API.
+
+Assuming your custom domain is set up as `test.example.com` to point to your REST API with a base path mapping `base-path` linked to your stage named `dev`, the following command will be directed to your REST API on the `dev` stage.
+
+You should include the `Host` header with the custom domain name in your request, so you don't need to set up any custom DNS to resolve to LocalStack.
 
 {{< command >}}
-$ curl -H 'Host: test.example.com' http://localhost:4566/test
+$ curl -H 'Host: test.example.com' http://localhost:4566/base-path
+{{< / command >}}
+
+The request above will be equivalent to the following request:
+{{< command >}}
+$ curl http://<your-api-id>.execute-api.localhost.localstack.cloud:4566/dev/
 {{< / command >}}
 
 ## API Gateway Resource Browser

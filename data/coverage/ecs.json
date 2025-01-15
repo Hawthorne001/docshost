@@ -8,7 +8,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -20,7 +20,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -32,7 +32,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -44,7 +44,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -79,8 +79,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": true,
-        "terraform_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -92,7 +92,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -103,8 +103,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": true,
-        "terraform_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -128,7 +128,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -151,8 +151,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": true,
-        "terraform_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -164,7 +164,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -176,7 +176,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -195,12 +195,36 @@
       }
     },
     {
+      "DescribeServiceDeployments": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeServiceRevisions": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
       "DescribeServices": {
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -212,7 +236,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -224,7 +248,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -236,7 +260,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -327,6 +351,18 @@
       }
     },
     {
+      "ListServiceDeployments": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
       "ListServices": {
         "implemented": true,
         "availability": "pro",
@@ -392,7 +428,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -440,7 +476,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -464,7 +500,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -476,7 +512,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -548,7 +584,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -560,7 +596,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -571,8 +607,8 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": false,
-        "external_test_suite": true,
-        "terraform_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -632,7 +668,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -668,7 +704,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -730,7 +766,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -738,6 +774,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_capacity_providers",
@@ -776,6 +822,16 @@
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
           },
@@ -1070,6 +1126,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_tag_task_definition",
             "test": "test_tag_task_definition",
             "response": "200",
@@ -1168,6 +1234,16 @@
             "aws_validated": true,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       }
@@ -1322,7 +1398,7 @@
       "cluster, desiredCount, launchType, networkConfiguration, serviceName, serviceRegistries, taskDefinition": {
         "ls_pro": [
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -1330,6 +1406,30 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "internal"
+          }
+        ]
+      },
+      "cluster, desiredCount, launchType, networkConfiguration, serviceName, taskDefinition": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       },
@@ -1392,13 +1492,23 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -1439,6 +1549,16 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -1554,8 +1674,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -1564,7 +1684,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -1572,6 +1692,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_capacity_providers",
@@ -1620,6 +1750,16 @@
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
           },
@@ -1914,6 +2054,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_tag_task_definition",
             "test": "test_tag_task_definition",
             "response": "200",
@@ -2012,6 +2162,16 @@
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       }
@@ -2019,6 +2179,16 @@
     "DeleteService": {
       "cluster, force, service": {
         "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
             "test": "test_correct_number_of_containers",
@@ -2048,6 +2218,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       },
@@ -2064,8 +2244,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2074,7 +2254,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -2192,96 +2372,6 @@
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/scenario/fargate_prometheus/test_fargate_prometheus.py::TestFargatePrometheus::test_infra",
-            "test": "test_infra",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_ecs_alb_apigateway_integration",
-            "test": "test_ecs_alb_apigateway_integration",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsFargateApplicationLoadBalanced::test_service_deployment",
-            "test": "test_service_deployment",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsFirelensStackFluentBit::test_log_emission",
-            "test": "test_log_emission",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsFirelensStackFluentD::test_log_emission",
-            "test": "test_log_emission",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsNetworkLoadBalancedFargate::test_port_connection",
-            "test": "test_port_connection",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": true,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsQueueProccesingPattern::test_queue_proccessing",
-            "test": "test_queue_proccessing",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "internal"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_samples.py::TestSharedResourcesSample::test_deployed_resources",
-            "test": "test_deployed_resources",
-            "response": "500",
-            "error": "InternalError",
-            "snapshot_skipped": "",
-            "aws_validated": true,
-            "snapshot_tested": true,
-            "origin": "internal"
           }
         ]
       }
@@ -2300,8 +2390,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2310,7 +2400,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -2318,6 +2408,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_ecs_alb_apigateway_integration",
@@ -2328,6 +2428,16 @@
             "aws_validated": true,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
@@ -2614,7 +2724,7 @@
             "test": "test_create_task_definition_validation[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2624,7 +2734,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2634,7 +2744,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine:3.12-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2644,7 +2754,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine:latest-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2654,7 +2764,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:1fd62556954250bac80d601a196bb7fd480ceba7c10e94dd8fd4c6d1c08783d5-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2664,7 +2774,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2674,7 +2784,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08@-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2684,7 +2794,7 @@
             "test": "test_create_task_definition_validation[test-container-docker.io/nginx-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2694,17 +2804,17 @@
             "test": "test_create_task_definition_validation[test-container-library/alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-east-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
-            "test": "test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-east-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-region-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
+            "test": "test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-region-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2714,7 +2824,7 @@
             "test": "test_create_task_definition_validation[test-container-public.ecr.aws/xray/aws-xray-daemon:3.x-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2724,7 +2834,7 @@
             "test": "test_create_task_definition_validation[test-container-public.ecr.aws/xray/aws-xray-daemon:v3.0.0-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2755,6 +2865,16 @@
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -3008,6 +3128,16 @@
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       }
@@ -3042,13 +3172,33 @@
       "cluster, services": {
         "ls_pro": [
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -3079,6 +3229,16 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "external"
           },
           {
@@ -3154,8 +3314,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -3174,7 +3334,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -3184,7 +3344,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -3192,6 +3352,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_ecs_alb_apigateway_integration",
@@ -3204,14 +3374,24 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
-            "test": "test_correct_number_of_containers",
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
@@ -3221,7 +3401,7 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
-            "origin": "external"
+            "origin": "internal"
           },
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_set_apparmor_profile",
@@ -3761,6 +3941,26 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "external"
           },
           {
@@ -3852,6 +4052,26 @@
             "aws_validated": true,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       },
@@ -3904,6 +4124,16 @@
       "cluster": {
         "ls_pro": [
           {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestClustersCrud::test_cluster_capacity_providers",
             "test": "test_cluster_capacity_providers",
             "response": "200",
@@ -3911,6 +4141,16 @@
             "snapshot_skipped": "['$..cluster.attachments', '$..cluster.attachmentsStatus', '$..cluster.statistics', '$..cluster.tags']",
             "aws_validated": true,
             "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
             "origin": "external"
           },
           {
@@ -4184,6 +4424,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_tag_task_definition",
             "test": "test_tag_task_definition",
             "response": "200",
@@ -4199,6 +4449,16 @@
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..cluster.attachments', '$..cluster.capacityProviders', '$..cluster.defaultCapacityProviderStrategy', '$..cluster.statistics', '$..cluster.tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -4256,13 +4516,23 @@
       "cluster": {
         "ls_pro": [
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "external"
           },
           {
@@ -4273,6 +4543,16 @@
             "snapshot_skipped": "['$..cluster.attachments', '$..cluster.attachmentsStatus', '$..cluster.statistics', '$..cluster.tags']",
             "aws_validated": true,
             "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
             "origin": "external"
           },
           {
@@ -4556,6 +4836,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_tag_task_definition",
             "test": "test_tag_task_definition",
             "response": "200",
@@ -4571,6 +4861,30 @@
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..cluster.attachments', '$..cluster.capacityProviders', '$..cluster.defaultCapacityProviderStrategy', '$..cluster.statistics', '$..cluster.tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      },
+      "cluster, desiredStatus": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -4590,8 +4904,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -4610,13 +4924,23 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -4687,6 +5011,26 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "external"
           },
           {
@@ -4862,6 +5206,16 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_ecs.py::test_ecs_alb_apigateway_integration",
             "test": "test_ecs_alb_apigateway_integration",
             "response": "200",
@@ -4992,6 +5346,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs_patterns.py::TestEcsFargateApplicationLoadBalanced::test_service_deployment",
             "test": "test_service_deployment",
             "response": "200",
@@ -5060,6 +5424,16 @@
             "aws_validated": true,
             "snapshot_tested": false,
             "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       },
@@ -5128,7 +5502,7 @@
       "containerDefinitions, cpu, family, memory, networkMode, requiresCompatibilities, taskRoleArn": {
         "ls_pro": [
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
@@ -5155,6 +5529,16 @@
       },
       "containerDefinitions, family": {
         "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
+          },
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
             "test": "test_correct_number_of_containers",
@@ -5280,7 +5664,7 @@
             "test": "test_create_task_definition_validation[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5290,7 +5674,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5300,7 +5684,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine:3.12-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5310,7 +5694,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine:latest-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5320,7 +5704,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:1fd62556954250bac80d601a196bb7fd480ceba7c10e94dd8fd4c6d1c08783d5-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5330,7 +5714,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5340,7 +5724,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08@-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5350,7 +5734,7 @@
             "test": "test_create_task_definition_validation[test-container-docker.io/nginx-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5360,17 +5744,17 @@
             "test": "test_create_task_definition_validation[test-container-library/alpine-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-east-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
-            "test": "test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-east-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-region-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
+            "test": "test_create_task_definition_validation[test-container-localhost.localstack.cloud:4510/cdk-hnb659fds-container-assets-111111111111-us-region-1:5f423786c2e2f4ca36a670185bfd1e7f44f59942e3f5ad1994fcf1a1d1d66ba0-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5380,7 +5764,7 @@
             "test": "test_create_task_definition_validation[test-container-public.ecr.aws/xray/aws-xray-daemon:3.x-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5390,7 +5774,7 @@
             "test": "test_create_task_definition_validation[test-container-public.ecr.aws/xray/aws-xray-daemon:v3.0.0-True]",
             "response": "200",
             "error": "",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5640,7 +6024,7 @@
             "test": "test_create_task_definition_validation[$test-container-alpine-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5650,7 +6034,7 @@
             "test": "test_create_task_definition_validation[@test-container-alpine-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5660,7 +6044,7 @@
             "test": "test_create_task_definition_validation[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-alpine-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5670,7 +6054,7 @@
             "test": "test_create_task_definition_validation[test container-alpine-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5680,7 +6064,7 @@
             "test": "test_create_task_definition_validation[test-container-@library/alpine:latest-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5690,7 +6074,7 @@
             "test": "test_create_task_definition_validation[test-container-alpin e:3.12.0-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5700,7 +6084,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine 3.12.0-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5710,7 +6094,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine:latest@sha256:1234567890-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5720,7 +6104,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@3.12.0-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5730,7 +6114,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:1234567890-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5740,7 +6124,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08@s-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5750,7 +6134,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08@sha256:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5760,7 +6144,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha384:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5770,7 +6154,7 @@
             "test": "test_create_task_definition_validation[test-container-alpine@sha512:9F86D081884C7D659A2FEAA0C55AD015A3BF4F1B2B0B822CD15D6C15B0F00A08-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5780,7 +6164,7 @@
             "test": "test_create_task_definition_validation[test-container-library/@alpine:latest-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5790,7 +6174,7 @@
             "test": "test_create_task_definition_validation[test-container-library/alpine@latest-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5800,7 +6184,7 @@
             "test": "test_create_task_definition_validation[test-container-library/image@name-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5810,7 +6194,7 @@
             "test": "test_create_task_definition_validation[test-container-library/image@name:latest-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5820,7 +6204,7 @@
             "test": "test_create_task_definition_validation[test@container-alpine-False]",
             "response": "400",
             "error": "ClientException",
-            "snapshot_skipped": "['$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
+            "snapshot_skipped": "['$..taskDefinition.containerDefinitions..systemControls', '$..taskDefinition.networkMode', '$..taskDefinition.registeredBy', '$..taskDefinition.requiresAttributes', '$..tags']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -5934,6 +6318,16 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       },
@@ -5960,13 +6354,23 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/applicationautoscaling/test_application_autoscaling.py::TestAppAutoscaling::test_ecs_register_scalable_target",
+            "test": "test_ecs_register_scalable_target",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..ScalableTargetARN', '$..ScalableTargets..RoleARN', '$..ScalableTargets..SuspendedState']",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -5987,6 +6391,16 @@
             "snapshot_skipped": "",
             "aws_validated": false,
             "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
             "origin": "internal"
           },
           {
@@ -6119,11 +6533,39 @@
           }
         ]
       },
+      "clientToken, cluster, count, launchType, networkConfiguration, taskDefinition": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          }
+        ]
+      },
       "clientToken, cluster, count, launchType, overrides, propagateTags, taskDefinition": {
         "ls_pro": [
           {
             "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTaskExecution::test_ecs_task_multiple",
             "test": "test_ecs_task_multiple",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      },
+      "clientToken, cluster, count, launchType, taskDefinition": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -6300,8 +6742,8 @@
       "cluster, task": {
         "ls_pro": [
           {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestEcsDocker::test_correct_number_of_containers",
-            "test": "test_correct_number_of_containers",
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestECSDevx::test_container_logs_on_failure",
+            "test": "test_container_logs_on_failure",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -6376,16 +6818,6 @@
             "error": "",
             "snapshot_skipped": "",
             "aws_validated": true,
-            "snapshot_tested": false,
-            "origin": "external"
-          },
-          {
-            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTaskExecution::test_describe_service_with_task_definition",
-            "test": "test_describe_service_with_task_definition",
-            "response": "200",
-            "error": "",
-            "snapshot_skipped": "",
-            "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
           },
@@ -6568,6 +7000,26 @@
             "aws_validated": false,
             "snapshot_tested": false,
             "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/ecs/test_ecs.py::TestTasksCrud::test_list_tasks_with_cluster_and_service",
+            "test": "test_list_tasks_with_cluster_and_service",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/events/test_events_targets.py::TestEventsTargetECS::test_put_events_with_target_ecs",
+            "test": "test_put_events_with_target_ecs",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..imageDigest', '$..managedAgents', '$..name', '$..networkInterfaces', '$..runtimeId', '$..attachments..details', '$..attachments..details..value', '$..attachments..status', '$..availabilityZone', '$..enableExecuteCommand', '$..executionStoppedAt', '$..group', '$..overrides.containerOverrides', '$..overrides.inferenceAcceleratorOverrides', '$..startedBy', '$..version', '$..fargateEphemeralStorage', '$..desiredStatus', '$..lastStatus', '$..stoppedReason', '$..stoppedAt', '$..stopCode']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       }
@@ -6618,8 +7070,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -6628,7 +7080,7 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/apigateway/test_http_apis.py::TestHttpApis::test_servicediscovery_ecs_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/apigatewayv2/test_apigatewayv2_private.py::TestHttpApiServiceDiscoveryPrivateIntegration::test_servicediscovery_ecs_integration",
             "test": "test_servicediscovery_ecs_integration",
             "response": "200",
             "error": "",

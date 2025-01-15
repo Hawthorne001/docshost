@@ -221,15 +221,81 @@ $ curl http://localhost:4566/.well-known/jwks_uri
 
 Cognito offers a variety of lifecycle hooks called Cognito Lambda triggers, which allow you to react to different lifecycle events and customize the behavior of user signup, confirmation, migration, and more.
 
-To illustrate, suppose you wish to define a _user migration_ Lambda trigger.
-In this case, you can start by creating a Lambda function, let's say named `"f1"`, responsible for performing the migration.
+To illustrate, suppose you wish to define a _user migration_ Lambda trigger in order to migrate users from your existing user directory into Amazon Cognito user pools at sign-in.
+In this case, you can start by creating a Lambda function, let's say named `"migrate_users"`, responsible for performing the migration by creating a new file `index.js` with the following code:
+
+```javascript
+const validUsers = {
+  belladonna: { password: "12345678Aa!", emailAddress: "bella@example.com" },
+};
+
+// Replace this mock with a call to a real authentication service.
+const authenticateUser = (username, password) => {
+  if (validUsers[username] && validUsers[username].password === password) {
+    return validUsers[username];
+  } else {
+    return null;
+  }
+};
+
+const lookupUser = (username) => {
+  const user = validUsers[username];
+
+  if (user) {
+    return { emailAddress: user.emailAddress };
+  } else {
+    return null;
+  }
+};
+
+exports.handler = async (event) => {
+  if (event.triggerSource == "UserMigration_Authentication") {
+    // Authenticate the user with your existing user directory service
+    const user = authenticateUser(event.userName, event.request.password);
+    if (user) {
+      event.response.userAttributes = {
+        email: user.emailAddress,
+        email_verified: "true",
+      };
+      event.response.finalUserStatus = "CONFIRMED";
+      event.response.messageAction = "SUPPRESS";
+    }
+  } else if (event.triggerSource == "UserMigration_ForgotPassword") {
+    // Look up the user in your existing user directory service
+    const user = lookupUser(event.userName);
+    if (user) {
+      event.response.userAttributes = {
+        email: user.emailAddress,
+        // Required to enable password-reset code to be sent to user
+        email_verified: "true",
+      };
+      event.response.messageAction = "SUPPRESS";
+    }
+  }
+
+  return event;
+};
+```
+
+Enter the following commands to create the Lambda function:
+
+{{< command >}}
+$ zip function.zip index.js
+$ awslocal lambda create-function \
+    --function-name migrate_users \
+    --runtime nodejs18.x \
+    --zip-file fileb://function.zip \
+    --handler index.handler \
+    --role arn:aws:iam::000000000000:role/lambda-role
+{{</ command >}}
+
 Subsequently, you can define the corresponding `--lambda-config` when creating the user pool to link it with the Lambda function:
 
 {{< command >}}
 $ awslocal cognito-idp create-user-pool \
   --pool-name test2 \
-  --lambda-config '{"UserMigration":"arn:aws:lambda:us-east-1:000000000000:function:f1"}'
-{{< /command >}}
+  --lambda-config '{"UserMigration":"arn:aws:lambda:us-east-1:000000000000:function:migrate_users"}'
+{{</ command >}}
 
 Upon successful authentication of a non-registered user, Cognito will automatically trigger the migration Lambda function, allowing the user to be added to the pool after migration.
 
@@ -263,6 +329,72 @@ Ensuring this match is crucial for the proper functioning of the authentication 
   --data-urlencode 'code=test123' \
   'http://localhost:4566/_aws/cognito-idp/oauth2/token'
 {"access_token": "eyJ0eXAi…lKaHx44Q", "expires_in": 86400, "token_type": "Bearer", "refresh_token": "e3f08304", "id_token": "eyJ0eXAi…ADTXv5mA"}
+```
+
+### Client credentials grant
+
+The client credentials grant is designed for machine-to-machine (M2M) communication.
+The Client Credentials Grant allows the machine (client) to authenticate itself directly with the authorization server using its credentials, such as a client ID and client secret.
+The client credentials grant allows for scope-based authorization from a non-interactive system to an API.
+Your app can directly request client credentials from the token endpoint to receive an access token.
+
+To request the token from the LocalStack URL, use the following endpoint: `://cognito-idp.localhost.localstack.cloud:4566/_aws/cognito-idp/oauth2/token`.
+For additional information on our endpoints, refer to our [Internal Endpoints](https://docs.localstack.cloud/references/internal-endpoints/) documentation.
+
+If there are multiple user pools, LocalStack identifies the appropriate one by examining the `clientid` of the request.
+
+To get started, follow the example below:
+
+```sh
+#Create client user pool with a client.
+export client_id=$(awslocal cognito-idp create-user-pool-client --user-pool-id $pool_id --client-name test-client --generate-secret  | jq -rc ".UserPoolClient.ClientId")
+
+#Retrieve secret.
+export client_secret=$(awslocal cognito-idp describe-user-pool-client --user-pool-id $pool_id --client-id $client_id | jq -r '.UserPoolClient.ClientSecret')
+
+#Create resource server
+awslocal cognito-idp create-resource-server \
+  --user-pool-id $pool_id \
+  --identifier "api-client-organizations" \
+  --name "Resource Server Name" \
+  --scopes '[{"ScopeName":"read","ScopeDescription":"Read access to Organizations"}]'
+
+```
+
+You can retrieve the token from your application using the specified endpoint: `http://cognito-idp.localhost.localstack.cloud:4566/_aws/cognito-idp/oauth2/token`.
+
+```javascript
+require('dotenv').config();
+const axios = require('axios');
+
+async function getAccessTokenWithSecret() {
+    const clientId = process.env.client_id;
+    const clientSecret = process.env.client_secret;
+    const scope = 'api-client-organizations/read';
+    const url = 'http://cognito-idp.localhost.localstack.cloud:4566/_aws/cognito-idp/oauth2/token';
+
+    const authHeader = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+
+    const headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Basic ${authHeader}`
+    };
+
+    const payload = new URLSearchParams({
+        grant_type: 'client_credentials',
+        client_id: clientId,
+        scope: scope
+    });
+
+    try {
+        const response = await axios.post(url, payload, { headers });
+        console.log(response.data);
+    } catch (error) {
+        console.error('Error fetching access token:', error.response ? error.response.data : error.message);
+    }
+}
+
+getAccessTokenWithSecret();
 ```
 
 ## Serverless and Cognito

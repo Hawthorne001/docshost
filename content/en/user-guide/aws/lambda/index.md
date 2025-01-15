@@ -66,18 +66,10 @@ $ awslocal lambda create-function \
     --handler index.handler \
     --role arn:aws:iam::000000000000:role/lambda-role \
     --tags '{"_custom_id_":"my-custom-subdomain"}'
-$ awslocal lambda create-function-url-config \
-    --function-name localstack-lambda-url-example \
-    --auth-type NONE
-{
-    "FunctionUrl": "http://my-custom-subdomain.lambda-url.<region>...",
-    ....
-}
 {{< / command >}}
-You must specify the `_custom_id_` tag **before** using the `create-function-url-config` command.
+You must specify the `_custom_id_` tag **before** <a href="#create-a-function-url">creating a Function URL</a>.
 After the URL configuration is set up, any modifications to the tag will not affect it.
-At present, custom IDs can be assigned only to the `$LATEST` version of the function.
-LocalStack does not yet support custom IDs for function version aliases.
+LocalStack supports assigning custom IDs to both the `$LATEST` version of the function or to an existing version alias.
 {{< /callout >}}
 
 {{< callout >}}
@@ -124,9 +116,36 @@ $ awslocal lambda create-function-url-config \
 This will generate a HTTP URL that can be used to invoke the Lambda function.
 The URL will be in the format `http://<XXXXXXXX>.lambda-url.us-east-1.localhost.localstack.cloud:4566`.
 
+{{< callout "note">}}
+As previously mentioned, when a Lambda Function has a `_custom_id_` tag, LocalStack sets this tag's value as the subdomain in the Function's URL.
+
+{{< command >}}
+$ awslocal lambda create-function-url-config \
+    --function-name localstack-lambda-url-example \
+    --auth-type NONE
+{
+    "FunctionUrl": "http://my-custom-subdomain.lambda-url.<region>...",
+    ....
+}
+{{< / command >}}
+
+In addition, if you pass an an existing version alias as a `Qualifier` to the request, the created URL will combine the custom ID and the alias in the form `<custom-id>-<alias>`.
+
+{{< command >}}
+$ awslocal lambda create-function-url-config \
+    --function-name localstack-lambda-url-example \
+    --auth-type NONE
+    --qualifier test-alias
+{
+    "FunctionUrl": "http://my-custom-subdomain-test-alias.lambda-url.<region>...",
+    ....
+}
+{{< / command >}}
+{{< /callout >}}
+
 ### Trigger the Lambda function URL
 
-You can now trigger the Lambda function by sending a HTTP POST request to the URL using `cURL` or your REST HTTP client:
+You can now trigger the Lambda function by sending a HTTP POST request to the URL using [curl](https://curl.se/) or your REST HTTP client:
 
 {{< command >}}
 $ curl -X POST \
@@ -143,18 +162,62 @@ The product of 10 and 10 is 100%
 
 ## Lambda Event Source Mappings
 
-{{< callout >}}
-LocalStack now supports a new event rule engine for [Lambda event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html).
-You can [configure]({{< ref "configuration" >}}) `EVENT_RULE_ENGINE=java` (preview) to use the AWS [event-ruler](https://github.com/aws/event-ruler), which offers better parity.
-{{< /callout >}}
-
 [Lambda event source mappings](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html) allows you to connect Lambda functions to other AWS services.
 The following event sources are supported in LocalStack:
 
+- [Simple Queue Service (SQS)](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html)
 - [DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html)
 - [Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html)
-- [Managed Streaming for Apache Kafka (MSK)](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html)
-- [Simple Queue Service (SQS)](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html)
+- [Managed Streaming for Apache Kafka (MSK)](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html) ⭐️
+- [Self-Managed Apache Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html) ⭐️
+
+### Behaviour Coverage
+
+The table below shows feature coverage for all supported event sources for the latest version of LocalStack.
+
+Unlike [API operation coverage](https://docs.localstack.cloud/references/coverage/coverage_lambda/), this table illustrates the **functional and behavioural coverage** of LocalStack's Lambda Event Source Mapping implementation.
+
+Where necessary, footnotes are used to provide additional context.
+
+{{< callout >}}
+Feature availability and coverage is categorized with the following system:
+- ⭐️ Only Available in LocalStack Pro image
+- 🟢 Fully Implemented
+- 🟡 Partially Implemented
+- 🟠 Not Implemented
+- ➖ Not Applicable (Not Supported by AWS)
+{{</callout >}}
+
+| | <th colspan="2" style="text-align:center;">SQS</th> <th colspan="2" style="text-align:center;">Stream</th> <th colspan="2" style="text-align:center;">Kafka ⭐️</th>
+|--------------------------------|-------------------------------------------------|:--------:|:----:|:---------:|:----------:|:----------:|:------------:|
+| **Parameter**                  | **Description**                                 | **Standard** | **FIFO** | **Kinesis** | **DynamoDB** | **Amazon MSK** | **Self-Managed** |
+| BatchSize                      | Batching events by count.                       | 🟡 [^1]   | 🟢    | 🟢       | 🟢        | 🟢          | 🟢            |
+| *Not Configurable*                             | Batch when ≥ 6 MB limit.                        | 🟠        | 🟠    | 🟠       | 🟠        | 🟢          | 🟢            |
+| MaximumBatchingWindowInSeconds | Batch by Time Window.                           | 🟠        | ➖    | 🟠       | 🟠        | 🟢          | 🟢            |
+| MaximumRetryAttempts           | Discard after N retries.                        | ➖        | ➖    | 🟢       | 🟢        | ➖          | ➖            |
+| MaximumRecordAgeInSeconds      | Discard records older than time `t`.            | ➖        | ➖    | 🟢       | 🟢        | ➖          | ➖            |
+| Enabled                        | Enabling/Disabling.                             | 🟢        | 🟢    | 🟢       | 🟢        | 🟢          | 🟢            |
+| FilterCriteria                 | Filter pattern evaluating. [^2] [^3]                    | 🟢        | 🟢    | 🟢       | 🟢        | 🟢          | 🟢            |
+| FunctionResponseTypes          | Enabling ReportBatchItemFailures.               | 🟢        | 🟢    | 🟢       | 🟢        | ➖          | ➖            |
+| BisectBatchOnFunctionError     | Bisect a batch on error and retry.              | ➖        | ➖    | 🟠       | 🟠        | ➖          | ➖            |
+| ScalingConfig                  | The scaling configuration for the event source. | 🟠        | 🟠    | ➖       | ➖        | ➖          | ➖            |
+| ParallelizationFactor          | Parallel batch processing by shard.             | ➖        | ➖    | 🟠       | 🟠        | ➖          | ➖            |
+| DestinationConfig.OnFailure    | SQS Failure Destination.                        | ➖        | ➖    | 🟢       | 🟢        | 🟠          | 🟠            |
+|                                | SNS Failure Destination.                        | ➖        | ➖    | 🟢       | 🟢        | 🟠          | 🟠            |
+|                                | S3 Failure Destination.                         | ➖        | ➖    | 🟢       | 🟢        | 🟠          | 🟠            |
+| DestinationConfig.OnSuccess    | Success Destinations.                           | ➖        | ➖    | ➖       | ➖        | ➖          | ➖            |
+| MetricsConfig                  | CloudWatch metrics.                             | 🟠        | 🟠    | 🟠       | 🟠        | 🟠          | 🟠            |
+| ProvisionedPollerConfig        | Control throughput via min-max limits.          | ➖        | ➖    | ➖       | ➖        | 🟠          | 🟠            |
+| StartingPosition               | Position to start reading from.                 | ➖        | ➖    | 🟢       | 🟢        | 🟢          | 🟢            |
+| StartingPositionTimestamp      | Timestamp to start reading from.                | ➖        | ➖    | 🟢       | ➖        | 🟢          | 🟢            |
+| TumblingWindowInSeconds        | Duration (seconds) of a processing window.      | ➖        | ➖    | 🟠       | 🟠        | ➖          | ➖            |
+| Topics ⭐️                      | Kafka topics to read from.                      | ➖        | ➖    | ➖       | ➖        | 🟢          | 🟢            |
+
+[^1]: SQS event-source mappings are limited to sending batches of up to `10` records at a time when invoking Lambda functions.
+[^2]: Read more at [Control which events Lambda sends to your function](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html)
+[^3]: The available Metadata properties may not have full parity with AWS depending on the event source (read more at [Understanding event filtering basics](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-basics)).
+
+Create a [GitHub issue](https://github.com/localstack/localstack/issues/new/choose) or reach out to [LocalStack support](https://docs.localstack.cloud/getting-started/help-and-support/) if you experience any challenges.
 
 ## Lambda Layers (Pro)
 

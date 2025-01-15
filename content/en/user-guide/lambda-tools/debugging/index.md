@@ -20,7 +20,13 @@ More examples and tooling support for local Lambda debugging (including support 
 * [Debugging Python lambdas](#debugging-python-lambdas)
 * [Debugging JVM lambdas](#debugging-jvm-lambdas)
 * [Debugging Node.js lambdas](#debugging-nodejs-lambdas)
+* [Lambda Debug Mode (preview)](#lambda-debug-mode-preview)
 * [Resources](#resources)
+
+{{< callout tip >}}
+Due to the ports published by the Lambda container for the debugger, it is currently only possible to debug one Lambda function at a time.
+For advanced debugging scenarios, such as those requiring multiple ports, refer to [Lambda Debug Mode (preview)]({{< relref "debugging#lambda-debug-mode-preview" >}}) section.
+{{< /callout >}}
 
 ## Debugging Python lambdas
 
@@ -418,7 +424,138 @@ $ awslocal lambda invoke --function-name func1 \
 {{% /tab %}}
 {{< /tabpane >}}
 
+## Lambda Debug Mode (Preview)
+
+Lambda Debug Mode is a preview feature in LocalStack designed to enhance your Lambda debugging workflows.
+This feature provides an optimized environment for debugging Lambda functions, ensuring that you have the
+necessary tools and flexibility to troubleshoot effectively.
+
+### Key Features
+* **Automatic Timeout Management**: Integrates with API Gateway to prevent Lambda function timeouts,
+giving developers ample time to connect remote debuggers and inspect the function's behavior.
+* **Multi-Function Debugging**: Supports debugging multiple Lambda functions concurrently.
+
+### Enabling Lambda Debug Mode
+
+To enable Lambda Debug Mode, set the `LAMBDA_DEBUG_MODE` environment variable as shown below:
+
+{{< command >}}
+LAMBDA_DEBUG_MODE=1 \
+LAMBDA_DOCKER_FLAGS='-p 19891:19891' \
+localstack start
+{{< /command >}}
+
+When enabled, Lambda Debug Mode automatically adjusts timeouts to accommodate debugging needs:
+* **Lambda Container Startup Timeout**: Provides additional time for debugger connection during container creation.
+* **Lambda Execution Timeout**: Extends the execution window, allowing for in-depth remote debugging.
+* **API Gateway-Lambda Integration Timeout**: Increases timeout settings to avoid premature terminations.
+
+### Advanced Configuration
+
+For further customization, you can use a configuration file.
+Specify the path to this file with the `LAMBDA_DEBUG_MODE_CONFIG_PATH` environment variable, ensuring the
+file is mounted into the LocalStack container.
+Manually setting `LAMBDA_DOCKER_FLAGS` is unnecessary when using this configuration.
+
+Here is an example of mounting a `debug_config.yaml` in your LocalStack container to start your Debug Mode:
+
+{{< tabpane >}}
+{{< tab header="LocalStack CLI" lang="shell" >}}
+LOCALSTACK_LAMBDA_DEBUG_MODE=1 \
+LOCALSTACK_LAMBDA_DEBUG_MODE_CONFIG_PATH=/tmp/debug_config.yaml \
+localstack start --volume /path/to/debug-config.yaml:/tmp/lambda_debug_mode_config.yaml
+{{< /tab >}}
+{{< tab header="Docker Compose" lang="yaml" >}}
+version: "3.8"
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
+    image: localstack/localstack-pro  # required for Pro
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+      - "127.0.0.1:443:443"              # LocalStack HTTPS Gateway (Pro)
+    environment:
+      # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
+      - DEBUG=${DEBUG:-0}
+      - LAMBDA_DEBUG_MODE=1
+      - LAMBDA_DEBUG_MODE_CONFIG_PATH=/tmp/debug_config.yaml
+    volumes:
+      - "./debug_config.yaml:/tmp/debug_config.yaml"
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+{{< /tab >}}
+{{< /tabpane >}}
+
+Any change to the configuration file on your local filesystem would be automatically picked by the LocalStack container.
+After debugging a Lambda function, its associated container will automatically stop.
+
+The configuration file should contain a `functions` block where you can define debug settings
+for each specific Lambda function ARN.
+
+#### Example: Basic Debugging Configuration
+This example configures Lambda Debug Mode to use port 19891 for the remote debugger.
+
+```yaml
+functions:
+  arn:aws:lambda:eu-central-1:000000000000:function:func-one:
+    debug-port: 19891
+```
+
+#### Example: Disabling Automatic Timeout Handling
+In this example, the automatic timeout handling feature is disabled for the specified Lambda function,
+enforcing the predefined timeouts instead.
+
+```yaml
+functions:
+  arn:aws:lambda:eu-central-1:000000000000:function:func-one:
+    debug-port: 19891
+    enforce-timeouts: true
+```
+
+### Handling Unqualified ARNs
+
+Specifying an unqualified Lambda ARN in the configuration is equivalent to specifying the ARN
+with the `$LATEST` version qualifier.
+
+```yaml
+functions:
+  arn:aws:lambda:eu-central-1:000000000000:function:func-one:$LATEST:
+    debug-port: 19891
+```
+
+### Debugging Multiple Functions
+
+To debug multiple Lambda functions simultaneously, assign a different debug port to each function.
+Note that this configuration affects the container's internal debugger port as well, so the debugger
+port must be set accordingly.
+
+```yaml
+functions:
+  arn:aws:lambda:eu-central-1:000000000000:function:func-one:
+    debug-port: 19891
+  arn:aws:lambda:eu-central-1:000000000000:function:func-two:
+    debug-port: 19892
+```
+
+### Debugging Different Versions
+
+You can also debug different versions of the same Lambda function by assigning unique ports to each version.
+
+```yaml
+functions:
+  arn:aws:lambda:eu-central-1:000000000000:function:func-one:1:
+    debug-port: 19891
+  arn:aws:lambda:eu-central-1:000000000000:function:func-two:2:
+    debug-port: 19892
+```
+
 ## Resources
 
 * [Lambda Code Mounting and Debugging (Python)](https://github.com/localstack/localstack-pro-samples/tree/master/lambda-mounting-and-debugging)
 * [Spring Cloud Function on LocalStack (Kotlin JVM)](https://github.com/localstack/localstack-pro-samples/tree/master/sample-archive/spring-cloud-function-microservice)
+* [Enable Lambda Debug Mode to Automatically Raise Execution Timeouts (Java)](https://github.com/localstack-samples/localstack-pro-samples/tree/master/lambda-debug-mode/java/base-enable-lambda-debug-mode)
+* [Enable Lambda Debug Mode to Automatically Raise Execution Timeouts (Python)](https://github.com/localstack-samples/localstack-pro-samples/tree/master/lambda-debug-mode/python/base-multiple-lambda-debug-mode)
+* [Enable Lambda Debug Mode to Automatically Raise Execution Timeouts for multiple Lambdas (Python)](https://github.com/localstack-samples/localstack-pro-samples/tree/master/lambda-debug-mode/python/base-multiple-lambda-debug-mode)
+* [Enable Lambda Debug Mode to Automatically Handle Concurrent Function Invocations (Python)](https://github.com/localstack-samples/localstack-pro-samples/tree/master/lambda-debug-mode/python/base-concurrent-lambda-debug-mode)

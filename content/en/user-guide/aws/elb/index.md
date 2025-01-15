@@ -79,7 +79,7 @@ You can find the gateway address by running `docker inspect <container_id>`.
 
 ### Create a listener and a rule
 
-We create a for the load balancer using the [`CreateListener`](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) API.
+We create a listener for the load balancer using the [`CreateListener`](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) API.
 The following command creates a listener for the load balancer created in the previous step:
 
 {{< command >}}
@@ -146,6 +146,27 @@ The following output will be retrieved:
     "HOME": "/root"
   }
 }
+```
+
+#### Alternative URL structure
+
+If a request cannot be made to a subdomain of `localhost.localstack.cloud`, an alternative URL structure is available, however it is not returned by AWS management API methods.
+To make a request against an ELB with id `<elb-id>`, use the URL:
+
+```bash
+http(s)://localhost.localstack.cloud:4566/_aws/elb/<elb-id>/<elb-path>
+```
+
+Here's an example of how you would access the load balancer with a name of `example-lb` with the subdomain-based URL format:
+
+```bash
+http(s)://example-lb.elb.localhost.localstack.cloud:4566/test/path
+```
+
+With the alternative URL structure:
+
+```bash
+http(s)://localhost.localstack.cloud:4566/_aws/elb/example-lb/test/path
 ```
 
 ## Examples

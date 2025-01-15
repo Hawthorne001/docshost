@@ -138,7 +138,7 @@ $ localstack pod versions s3-test
 
 ### Pull your Pod state
 
-On a separate machine, start LocalStack while ensuring the auth token is properly configured.
+On a separate machine, start LocalStack while ensuring the Auth Token is properly configured.
 Then, retrieve the previously created Cloud Pod by employing the `load` command, specifying the Cloud Pod name as the first argument:
 
 {{< command >}}
@@ -205,6 +205,7 @@ The LocalStack Web Application enables you to :
 
 - Browse your Cloud Pods and access your version history.
 - Export & import Cloud Pods to and from LocalStack instances.
+- View Cloud Pods metadata, resources, regions, and version history.
 
 ### Browse Cloud Pods
 
@@ -222,6 +223,25 @@ The Cloud Pods Browser provides the following functionalities:
 - **View Cloud Pod storage**: View the organization storage usage and user storage usage on top of the Cloud Pods Browser.
 - **Delete Cloud Pod**: Delete a Cloud Pod by selecting the Cloud Pod and navigating to the **Actions** button, followed by **Delete**.
 
+### View Cloud Pods metadata
+
+You can view Cloud Pods metadata by selecting any Cloud Pod in the  [Cloud Pods Browser](https://app.localstack.cloud/pods).
+The metadata includes details such as:
+
+- The user who created the Cloud Pod
+- The creation timestamp
+- The LocalStack version used to create the Cloud Pod
+- The size of the Cloud Pod
+- The service resources contained in the Cloud Pod
+
+You can view detailed information within a Cloud Pod, including available resources, categorized services with configurations, and quick access to resource identifiers and endpoints—all without loading the Cloud Pod into your LocalStack runtime.
+
+To save metadata with resource details in the Cloud Pod, ensure your LocalStack container is running and save the Cloud Pod with `ENABLE_POD_RESOURCES=1`.
+Cloud Pods saved without this configuration enabled will not display granular details.
+
+<img src="cloud-pod-details.png" alt="Cloud Pods details" title="Cloud Pods details" width="900" />
+<br><br>
+
 ### Export & Import Cloud Pods
 
 You can export and import your LocalStack infrastructure state as a Cloud Pod using the LocalStack Web Application.
@@ -236,7 +256,9 @@ To export the state, follow these steps:
 1. Navigate to the **Cloud Pod** tab within the [Export/Import State](https://app.localstack.cloud/inst/default/state) page.
 2. Create AWS resources locally as needed.
 3. Enter the Pod name and toggle between the **New Pod** and **Existing Pod** options.
-4. Click on **Create New Pod**.
+4. Enter the services to save resources for.
+  By default, all available service resources are saved.
+5. Click on **Create New Pod**.
 
 A new Cloud Pod will be created and will be available for import into another LocalStack instance.
 You can check out the list of available Cloud Pods in the [Cloud Pod](https://app.localstack.cloud/pods) page.
@@ -515,6 +537,68 @@ Custom remote configurations are stored within the [LocalStack volume directory]
 Consequently, when sharing Cloud Pods among your team using a custom remote, each team member must define the identical remote configuration.
 Once added, a remote persists even after LocalStack restarts.
 
+## State Merging
+
+Cloud Pods offers various strategies for integrating states into your LocalStack container.
+The available strategies are:
+
+- `overwrite`: This strategy clears the existing state and loads the new state from the Cloud Pod, completely resetting the LocalStack state.
+- `account-region-merge` (**default**): This strategy merges services based on account and region pairs.
+  It attempts to combine states from both the current state and the Cloud Pod for the same account and region.
+- `service-merge`: This strategy merges services at the account-region level, provided there's no overlap in resources.
+  It prioritizes the loaded resources when merging.
+
+### LocalStack CLI
+
+To activate merge strategies, set `--strategy <strategy>` when loading a Cloud Pod using the LocalStack CLI.
+For instance, to load a Cloud Pod named `test-pod-s3-sqs` with the `service-merge` strategy, run the following command:
+
+{{< command >}}
+$ localstack pod load test-pod-s3-sqs --strategy service-merge
+{{< / command >}}
+
+### LocalStack Web Application
+
+To activate merge strategies, navigate to the **Cloud Pods** tab on the [Export/Import State page](https://app.localstack.cloud/inst/default/state).
+Enter the name of the Cloud Pod, select the version, choose the strategy from a dropdown, and click **Load State from Pod**.
+
+<img src="merge-strategy-web-app.png" alt="Merge Strategy Web UI" title="Merge Strategy Web UI" width="800px" />
+
+### Example scenario
+
+Let us take the image below as example.
+The two non overlapping account/region pairs (`0123456789/us-east-1` for the Cloud Pod and `0123456789/us-east-2` for the runtime) will be both present in the resulting state.
+For `0123456789/eu-central-1` however, we encounter a conflict, since both the Cloud Pod and the container hold a SQS state.
+With the `account-region-merge` strategy, the one from the Cloud Pod will be preserved.
+
+<img src="merge-strategies.png" alt="Merge Strategies" title="Merge Strategies" width="800px" />
+<br><br>
+
+On the other hand, in the `service-merge` strategy, the SQS resulting state will have 2 distinct queues if the queue from the Cloud Pod and the one in the container are distinct, i.e., do not have the same ARN.
+In case of an ARN conflict, only one queue, the one from the Cloud Pod, will be present in the result.
+
+### Dry Run
+
+To preview the changes that would occur when loading a Cloud Pod, you can use the `--dry-run` flag.
+The result will depend on the selected merge strategy.
+The result will be displayed in the console, and no changes will be made to the LocalStack state.
+
+```bash
+This load operation will modify the runtime state as follows:
+
+──────────────────────────── sns ────────────────────────────
++ 2 resources added.
+~ 1 resources modified.
+
+──────────────────────── cognito-idp ────────────────────────
++ 1 resources added.
+~ 0 resources modified.
+
+──────────────────────────── sqs ────────────────────────────
++ 1 resources added.
+~ 1 resources modified.
+```
+
 ## Cloud Pods & Persistence
 
 [Persistence]({{< ref "persistence" >}}) ensures that the service state persists across container restarts.
@@ -545,7 +629,7 @@ However, state management might not yet work reliably for every service.
 
 ## Troubleshooting
 
-### Unable to obtain auth token
+### Unable to obtain Auth Token
 
 When you try to save a Cloud Pod and see the error in LocalStack logs like this:
 

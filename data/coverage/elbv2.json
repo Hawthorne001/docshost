@@ -8,7 +8,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -20,7 +20,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -44,7 +44,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -56,7 +56,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -68,7 +68,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -80,7 +80,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -104,7 +104,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -116,7 +116,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -127,10 +127,22 @@
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": true,
-        "external_test_suite": true,
-        "terraform_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteSharedTrustStoreAssociation": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
         "snapshot_skipped": ""
       }
     },
@@ -140,7 +152,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -164,7 +176,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -176,9 +188,33 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeCapacityReservation": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeListenerAttributes": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
         "snapshot_skipped": ""
       }
     },
@@ -188,7 +224,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -200,7 +236,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -212,7 +248,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -224,7 +260,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -236,7 +272,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -260,7 +296,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -272,7 +308,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -284,7 +320,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -296,7 +332,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -339,6 +375,18 @@
       }
     },
     {
+      "GetResourcePolicy": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
       "GetTrustStoreCaCertificatesBundle": {
         "implemented": false,
         "availability": "",
@@ -363,12 +411,36 @@
       }
     },
     {
+      "ModifyCapacityReservation": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
       "ModifyListener": {
         "implemented": true,
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ModifyListenerAttributes": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -380,7 +452,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -392,7 +464,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -404,7 +476,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -416,7 +488,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -440,7 +512,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -452,7 +524,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -464,7 +536,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -488,7 +560,7 @@
         "availability": "pro",
         "internal_test_suite": true,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": true,
         "snapshot_tested": true,
         "snapshot_skipped": ""
@@ -512,7 +584,7 @@
         "availability": "pro",
         "internal_test_suite": false,
         "external_test_suite": true,
-        "terraform_test_suite": true,
+        "terraform_test_suite": false,
         "aws_validated": false,
         "snapshot_tested": false,
         "snapshot_skipped": ""
@@ -650,6 +722,26 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -670,6 +762,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_create_loadbalancer_rule",
             "test": "test_create_loadbalancer_rule",
             "response": "200",
@@ -680,11 +782,51 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_non_existent_listener",
+            "test": "test_describe_non_existent_listener",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -711,6 +853,26 @@
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..Rules..Actions..TargetGroupArn', '$..Rules..Conditions..Values', '$..LoadBalancers..AvailabilityZones..LoadBalancerAddresses', '$..LoadBalancers..IpAddressType', '$..Listeners..AlpnPolicy', '$..Listeners..DefaultActions..FixedResponseConfig.MessageBody', '$..Listeners..Port', '$..Listeners..SslPolicy', '$..TargetGroups..IpAddressType', '$..TargetGroups..ProtocolVersion']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_non_existent_listener",
+            "test": "test_describe_non_existent_listener",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -749,6 +911,26 @@
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..LoadBalancers[0].AvailabilityZones', '$..LoadBalancers[0].IpAddressType', '$..LoadBalancers[0].Scheme', '$..Error.Type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -910,6 +1092,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_create_load_balancer",
             "test": "test_create_load_balancer",
             "response": "200",
@@ -930,11 +1122,31 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -1034,6 +1246,26 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -1044,11 +1276,31 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_create_loadbalancer_rule",
             "test": "test_create_loadbalancer_rule",
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..Rules..Actions..TargetGroupArn', '$..Rules..Conditions..Values', '$..LoadBalancers..AvailabilityZones..LoadBalancerAddresses', '$..LoadBalancers..IpAddressType', '$..Listeners..AlpnPolicy', '$..Listeners..DefaultActions..FixedResponseConfig.MessageBody', '$..Listeners..Port', '$..Listeners..SslPolicy', '$..TargetGroups..IpAddressType', '$..TargetGroups..ProtocolVersion']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -1098,6 +1350,26 @@
       "HealthCheckEnabled, Name, TargetType": {
         "ls_pro": [
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -1108,8 +1380,18 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2052,8 +2334,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2142,6 +2424,26 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -2162,6 +2464,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_create_loadbalancer_rule",
             "test": "test_create_loadbalancer_rule",
             "response": "200",
@@ -2172,11 +2484,51 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_non_existent_listener",
+            "test": "test_describe_non_existent_listener",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2208,8 +2560,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2348,6 +2700,26 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -2360,6 +2732,16 @@
           {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_redirect_listener",
             "test": "test_redirect_listener",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -2388,6 +2770,16 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_load_balancers",
             "test": "test_describe_load_balancers",
             "response": "200",
@@ -2398,11 +2790,41 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_non_existent_listener",
+            "test": "test_describe_non_existent_listener",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2454,6 +2876,26 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -2464,11 +2906,31 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestListenerSelection::test_use_priority_for_listener_matching",
+            "test": "test_use_priority_for_listener_matching",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_create_loadbalancer_rule",
             "test": "test_create_loadbalancer_rule",
             "response": "200",
             "error": "",
             "snapshot_skipped": "['$..Rules..Actions..TargetGroupArn', '$..Rules..Conditions..Values', '$..LoadBalancers..AvailabilityZones..LoadBalancerAddresses', '$..LoadBalancers..IpAddressType', '$..Listeners..AlpnPolicy', '$..Listeners..DefaultActions..FixedResponseConfig.MessageBody', '$..Listeners..Port', '$..Listeners..SslPolicy', '$..TargetGroups..IpAddressType', '$..TargetGroups..ProtocolVersion']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRuleConditions::test_multiple_path_values",
+            "test": "test_multiple_path_values",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..RuleArn']",
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "external"
@@ -2500,8 +2962,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -3120,6 +3582,26 @@
             "origin": "external"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "400",
+            "error": "CommonServiceException",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "400",
+            "error": "CommonServiceException",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "400",
@@ -3130,8 +3612,18 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "400",
+            "error": "CommonServiceException",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
             "response": "400",
             "error": "CommonServiceException",
             "snapshot_skipped": "",
@@ -3156,8 +3648,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -3234,6 +3726,32 @@
             "aws_validated": true,
             "snapshot_tested": true,
             "origin": "internal"
+          }
+        ]
+      }
+    },
+    "DescribeListenerAttributes": {
+      "ListenerArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_non_existent_listener",
+            "test": "test_describe_non_existent_listener",
+            "response": "400",
+            "error": "ListenerNotFoundException",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
           }
         ]
       }
@@ -3414,6 +3932,16 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_listener_attributes",
+            "test": "test_describe_listener_attributes",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestLoadBalancer::test_describe_load_balancers",
             "test": "test_describe_load_balancers",
             "response": "200",
@@ -3514,8 +4042,8 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_db_connection",
-            "test": "test_db_connection",
+            "node_id": "LocalStack Pro: tests/aws/scenario/wordpress_blog/test_wordpress_blog.py::TestWordpressBlogScenario::test_cloudwatch_logs",
+            "test": "test_cloudwatch_logs",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -3604,8 +4132,18 @@
             "origin": "internal"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",
@@ -4292,6 +4830,26 @@
             "origin": "internal"
           },
           {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[host]",
+            "test": "test_internal_path_based_routing[host]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_internal_path_based_routing[path]",
+            "test": "test_internal_path_based_routing[path]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..content.headers.x-amzn-trace-id', '$..content.headers.x-amzn-trace-id', '$..content.headers.x-forwarded-for', '$..content.headers.x-forwarded-port', '$..content.headers.x-forwarded-proto', '$..sourceIp', '$..content.isBase64Encoded', '$..content.queryStringParameters', '$..headers.Connection', '$..headers.Content-Type', '$..headers.x-amzn-tls-cipher-suite', '$..headers.x-amzn-tls-version', '$..headers.Server', '$..headers.x-amzn-RequestId', '$..headers.x-amzn-requestid', '$..headers.X-Amzn-Trace-Id', '$..headers.x-amzn-trace-id']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
             "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestELB::test_load_balancing",
             "test": "test_load_balancing",
             "response": "200",
@@ -4302,8 +4860,18 @@
             "origin": "external"
           },
           {
-            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration",
-            "test": "test_route53_elb_integration",
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-4566]",
+            "test": "test_route53_elb_integration[port-4566]",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/elb/test_elb.py::TestRoute53Integrations::test_route53_elb_integration[port-80]",
+            "test": "test_route53_elb_integration[port-80]",
             "response": "200",
             "error": "",
             "snapshot_skipped": "",

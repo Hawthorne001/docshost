@@ -3,6 +3,8 @@ title: "EventBridge Pipes"
 linkTitle: "EventBridge Pipes"
 description: Get started with EventBridge Pipes on LocalStack
 tags: ["Pro image"]
+persistence: supported with limitations
+
 ---
 
 ## Introduction
@@ -20,11 +22,6 @@ The supported APIs are available on our [API coverage page]({{< ref "coverage_pi
 {{< callout >}}
 The implementation of EventBridge Pipes is currently in **preview** stage and under active development.
 If you would like support for more APIs or report bugs, please make an issue on [GitHub](https://github.com/localstack/localstack/issues/new/choose).
-{{< /callout >}}
-
-{{< callout "tip" >}}
-LocalStack now supports a new event rule engine for [EventBridge event patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html).
-You can [configure]({{< ref "configuration" >}}) `EVENT_RULE_ENGINE=java` (preview) to use the AWS [event-ruler](https://github.com/aws/event-ruler), which offers better parity.
 {{< /callout >}}
 
 ## Getting started
@@ -128,6 +125,21 @@ You can fetch the message from the target queue using the [`ReceiveMessage`](htt
 $ awslocal sqs receive-message \
     --queue-url http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/target-queue
 {{< /command >}}
+
+## Resource Browser
+
+The LocalStack Web Application provides a Resource Browser for managing EventBridge Pipes.
+You can access the Resource Browser by opening the LocalStack Web Application in your browser, navigating to the **Resource Browser** section, and then clicking on **EventBridge Pipes** under the **App Integration** section.
+
+<img src="pipes-resource-browser.png" alt="EventBridge Pipes Resource Browser" title="EventBridge Pipes Resource Browser" width="900" />
+<br>
+<br>
+
+The Resource Browser for EventBridge Pipes in LocalStack allows you to perform the following actions:
+
+1. **Create a Pipe**: Click on the **Create Pipe** button to set up a new pipe with a source and target service, filter criteria, and more.
+2. **View Pipe Details**: Click on the pipe name to view detailed information, including source, target, batch size, state, and more.
+3. **Delete a Pipe**: Select a pipe and click on the **Actions** dropdown menu, followed by **Remove Selected**, to delete the pipe.
 
 ## Supported sources
 
